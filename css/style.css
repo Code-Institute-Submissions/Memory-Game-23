@@ -19,6 +19,7 @@ body {
     margin: auto;                               /* center board on page */
     display: flex;
     flex-wrap: wrap;
+    perspective: 1000px;                        /* 3d effect */
 }
 
 .card {
@@ -27,11 +28,17 @@ body {
     margin: 5px;
     position: relative;
     transform: scale(1);                        /* click effect */
+    transform-style: preserve-3d;               /* 3d effect */
+    transition: transform .5s;                  /* 3d effect */
 }
 
 .card:active{                                   /* click effect */
     transform: scale(0.97);
     transition: transform .2s;
+}
+
+.card.flip{
+    transform: rotateY(180deg);
 }
 
 .front-face,
@@ -41,5 +48,10 @@ body {
     padding: 0;
     position: absolute;
     border-radius: 5px;
+    backface-visibility: hidden;                /* hides backface */
+}
+
+.front-face {
+    transform: rotateY(180deg);
 }
 
