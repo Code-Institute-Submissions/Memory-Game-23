@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;                              /* 100% available height space */
+    display: flex;
+    background-color: rgb(136, 136, 136);
+}
+
+
+/* Board */
+
+.board {
+    width: 500px;
+    height: 600px;
+    margin: auto;                               /* center board on page */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);                        /* click effect */
+}
+
+.card:active{                                   /* click effect */
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.front-face,
+.back-face{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    border-radius: 5px;
+}
+
