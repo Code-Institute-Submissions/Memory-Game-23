@@ -4,10 +4,42 @@
     box-sizing: border-box;
 }
 
-body {
+.game-area {
     height: 100vh;                              /* 100% available height space */
     display: flex;
     background-color: rgb(136, 136, 136);
+}
+
+
+/* Heading and Score Board */
+header {
+    background-color: rgb(136, 136, 136);
+    text-align: center;
+}
+
+h1 {
+    text-decoration: underline; 
+    color: rgb(255, 255, 255);
+}
+
+.score {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 10px 0 0 0;
+}
+
+button:hover {
+    box-shadow: inset 0px 0px 0px 1px black;
+    box-sizing: border-box;
+}
+
+.restart {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+p{
+    margin: 10px 0 0 0;
 }
 
 
