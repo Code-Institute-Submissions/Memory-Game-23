@@ -4,60 +4,33 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
-
 // setup moves counter
 let moves = 0;
 let counter = document.querySelector(".moves");
 
 
+
 function flipCard() {                                                   /* function called on click */
-if (lockBoard) return;
-if(this === firstCard) return;
+  if (lockBoard) return;
+  if(this === firstCard) return;
 
-this.classList.add('flip');
+  this.classList.add('flip');
 
-if (!hasFlippedCard) {
+  if (!hasFlippedCard) {
     // first click
     hasFlippedCard = true;
     firstCard = this;
-    
+
     return;
+  }
+
+  // second click
+  secondCard = this;
+  moveCounter();
+
+  checkForMatch();
 }
 
-// second click
-secondCard = this;
-moveCounter();
-
-checkForMatch();
-}
-
-function checkForMatch() {
-let isMatch = firstCard.dataset.cardid === secondCard.dataset.cardid;       /* iterinary operator */
-isMatch ? disableCards() : unflipCards();
-}
-
-function disableCards() {
-firstCard.removeEventListener('click', flipCard);
-secondCard.removeEventListener('click', flipCard);
-
-resetBoard();
-}
-
-function unflipCards() {
-lockBoard = true;
-
-setTimeout(() => {
-    firstCard.classList.remove('flip');
-    secondCard.classList.remove('flip');
-
-    resetBoard();
-}, 500);
-}
-
-function resetBoard(){
-    [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
-}
 
 // counts moves
 function moveCounter(){
@@ -68,6 +41,7 @@ function moveCounter(){
         startTimer();
     }
 }
+
 
 // timer
 var second = 0;
@@ -80,28 +54,73 @@ function startTimer(){
     },1000);
 }
 
-function shuffle(){                                                /* immediately invoked function expression */
+
+function checkForMatch() {
+  let isMatch = firstCard.dataset.cardid === secondCard.dataset.cardid;       /* iterinary operator */
+
+  isMatch ? disableCards() : unflipCards();
+}
+
+function disableCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+
+  resetBoard();
+}
+
+function unflipCards() {
+  lockBoard = true;
+
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+
+    resetBoard();
+  }, 1500);
+}
+
+function resetBoard(){
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
+
+(function shuffle(){                                                /* immediately invoked function expression */
     cards.forEach(card => {
         let randomPosition = Math.floor(Math.random() * 16);
         card.style.order = randomPosition;
     });
-};
+})();
 
 cards.forEach(card => card.addEventListener('click', flipCard));       /* loop through list and on click then fire flipcard*/
 
+
+
+
+
+
+/*
 // restart a new game 
 function restartGame(){
-    // reset moves
-    moves = 0;
-    counter.innerHTML = moves;
+    restartTimer();
+    restartMoves();
+};
 
+function restartTimer(){
     //reset timer
     second = 0;
     var timer = document.querySelector(".timer");
     timer.innerHTML = "0 secs";
     clearInterval(interval);
-
-    shuffle()
 };
 
-window.onload = restartGame();
+function restartMoves(){
+    // reset moves
+    moves = 0;
+    counter.innerHTML = moves;
+};*/
+
+/*
+
+
+
+*/
