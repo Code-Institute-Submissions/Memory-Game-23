@@ -54,7 +54,6 @@ function startTimer(){
     },1000);
 }
 
-
 function checkForMatch() {
   let isMatch = firstCard.dataset.cardid === secondCard.dataset.cardid;       /* iterinary operator */
 
@@ -94,15 +93,14 @@ function resetBoard(){
 cards.forEach(card => card.addEventListener('click', flipCard));       /* loop through list and on click then fire flipcard*/
 
 
-
-
-
-
-/*
 // restart a new game 
 function restartGame(){
+    hide();
     restartTimer();
     restartMoves();
+    shuffle();
+    resetBoard();
+    cards.forEach(card => card.addEventListener('click', flipCard));       /* loop through list and on click then fire flipcard*/
 };
 
 function restartTimer(){
@@ -117,10 +115,20 @@ function restartMoves(){
     // reset moves
     moves = 0;
     counter.innerHTML = moves;
-};*/
+};
 
-/*
+function shuffle(){                                                /* immediately invoked function expression */
+    cards.forEach(card => {
+        let randomPosition = Math.floor(Math.random() * 16);
+        card.style.order = randomPosition;
+    });
+};
 
-
-
-*/
+function hide(){
+    cards.forEach(card => {
+        if (!hasFlippedCard) {
+            lockBoard = false;
+            card.classList.remove('flip');
+        }
+    });
+}
