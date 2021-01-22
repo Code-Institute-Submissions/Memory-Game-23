@@ -12,7 +12,7 @@
 
 
 /* Heading and Score Board */
-header {
+header, footer {
     background-color: rgb(136, 136, 136);
     text-align: center;
 }
@@ -39,7 +39,7 @@ button:hover {
 }
 
 p{
-    margin: 10px 0 0 0;
+    padding: 8px 0;
 }
 
 
