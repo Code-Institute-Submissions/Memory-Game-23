@@ -88,10 +88,11 @@ Some thoughts I had before designing my site;
 
 ## Testing
 
-I used the W3C Markup Validator and W3C CSS Validator to validate my project making sure that there were no syntax errors.
+I used the W3C Markup Validator, W3C CSS Validator, and JavaScript Validator to validate my project making sure that there were no syntax errors.
 
 * [W3C Markup Validator](https://jigsaw.w3.org/css-validator/)
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+* [JavaScript Validator](https://jshint.com/)
 
 I used Google Chrome and Google Developer Tools for mobile devices to work through and test the page using real world events as the parameters, e.g. playing the game, completing and restarting.
 
