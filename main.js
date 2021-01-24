@@ -60,7 +60,6 @@ function startTimer(){
 // counts matches
 function matchCounter(){
     matches++;
-    console.log(matches)
     if(matches == 8){
         finish();
     }
@@ -120,7 +119,7 @@ function restartTimer(){
     //reset timer
     second = 0;
     var timer = document.querySelector(".timer");
-    timer.innerHTML = "0 secs";
+    timer.innerHTML = "0 seconds";
     clearInterval(interval);
 };
 

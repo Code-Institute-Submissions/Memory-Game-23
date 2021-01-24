@@ -11,71 +11,53 @@ It is designed to be intuitive and easy to use.
 
 The site's users are people who are trying to improve their hand eye coordination, cognitive skills, or simply just looking to kill a few minutes with a bit of fun.
 
-The sites creators intention is the same as the user.
+The sites creators’ intention is the same as the user.
 
-It’s a very simple UX idea having only one page, with a email contact link to the creator at the bottom.
+It’s a very simple UX idea having only one page, with an email contact link to the creator at the bottom.
 
 Some thoughts I had before designing my site;
 
-* What information was relevant for the user
-* How many unknown variables would I use
-* What does the user need for the game to be fun
-* How will I challenge the user
+* What information was relevant for the user?
+* How many unknown variables would I use?
+* What does the user need for the game to be fun?
+* How will I challenge the user?
 
 ### Design
 
 * Colour Scheme
-    * The colour scheme I used was is 3 colours, black, red and white, to match the colours used in common deck of cards, and a background color of grey.
+    * The colour scheme I used was is 3 colours, black, red and white, to match the colours used in common deck of cards, and a background colour of grey.
 * Typography
-    * The main draw to the site is the images so I kept the font to default Sans Sarif
+    * The main draw to the site is the images so I kept the font to default Sans Serif
 * Imagery
     * The imagery I decided on was a common deck of cards, it's universal and most people will have seen them before
 * Wireframes
     * Links to my initial Wireframe design is in the “Wireframe” folder in my repository.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Features 
 
-Each of the 5 pages has a universal header for the navigation of the site. It is made up of 3 columns. The middle column is the bands logo and links back to the home page. The side columns have 2 buttons in each and link to the other pages on the site.
+* From the "Project Example Idea 2" it suggested to "Build a simple single-player pattern-matching memory game." so that was the goal of my site.
 
-Each of the 5 pages has a universal footer that leads to the band’s social media pages.
+* I choose cards as most people are familiar and have seen this type of game before.
 
-The Home page (index.html) is used to describe what the band do, has 2 customer reviews, and gives contact details on how to book them for a gig. I embeded a video from Youtube of the band. 
-
-The Gigs page is a simple design of splitting the section into 2 columns and using a heading of the Month/Year on the left of the page and a list of Dates and Venues then down the right hand side of the page.
-
-The Merch page took a bit of thinking on my part as the band itself doesn’t actually sell merchandise so I went and looked at The Killers website for inspiration which just had a list of links to the sites that sold their merchandise so I used the same idea but had three separate links. Records linked to HMV, Clothes linked to Pennys, and Memorabilia linked to a memorabilia site.
-
-The Band page is a simple design also of a 4 rows, each split into 2 columns, one for a photo and another for a quick name, instrument, and description of each member.
-
-The Contact page is a form consisting of a name, email and message text input and a button to send the message.
+* As I went along I realised that just in case the page ever broke down or was inoperable that there was no way of the user to notify me, hence I added an email link to the footer.
 
 ### Existing Features
 
-* Header (on each page) – allows users on each page to navigate the website, by having them select buttons to go to each page on the site.
-* Footer (on each page) – allows users on each page to navigate to the bands social media sites which will open on a separate tab.
-* Home page (index.html) – allows the users to see the band in action by clicking an embedded video of the band from Youtube.
-* Merch page (merch.html) – allows the users to be redirected to sites which open on new tabs where the user can buy band merchandise.
-* The Gigs page (gigs.html) – allows the users to see when and where the band are playing in the upcoming months.
-* The Band page (band.html) – allows the users to get to know the band members.
-* The Contact page (contact.html) – allows the users to contact the band through use of a form.
+* Header – displays the title, reset button, amount of moves and time in seconds.
+
+* Game Area - is the area (div) between the header and footer that the cards are displayed on
+
+* Cards - I started with an idea of 8 cards, 16 in total, as this would give a nice game area and would be aesthetically pleasing
+
+* Footer – contains my name and a way to contact me
 
 ### Features Left to Implement
 
-* Header (on each page) – I’d like to make this shrink and stick to the top of the window when users scroll down on each page.
-* The Contact page (contact.html) – I’d actually like to test this form and get it working to a actual email address.
+* A start page describing the game, how to play and start button.
+
+* A scoring system - as I worked through the design I thought there should a difficulty option setting, a drop down menu with easy - 16 cards, normal - 36 cards, and hard - 36 cards with the flip back timer set to 200.
+
+* A modal with a name, return email, and message input so that if the user is contacting me they can just type their message directly without having to open there emails on another tab.
 
 
 ## Technologies Used
@@ -84,6 +66,8 @@ The Contact page is a form consisting of a name, email and message text input an
 
 * [HTML5](https://en.wikipedia.org/wiki/HTML5)
 * [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [Java](https://en.wikipedia.org/wiki/JavaScript)
+* [jQuery](https://en.wikipedia.org/wiki/JQuery)
 
 ### Frameworks, Libraries & Programs Used
 * [Code-Institute-Org/gitpod-full-template](https://github.com/Code-Institute-Org/gitpod-full-template)
@@ -92,8 +76,6 @@ The Contact page is a form consisting of a name, email and message text input an
     * The project uses Bootstrap for styling
 * [Font Awesome](https://fontawesome.com/)
     * The project uses Font Awesome for the Icons
-* [Google Fonts](https://fonts.google.com/)
-    * The project uses Google Fonts for the Icons
 * [hover.css](https://cdnjs.com/libraries/hover.css)
     * The project uses hover.css for the hover effect on the buttons and links
 * [Balsamiq](https://balsamiq.com/)
@@ -106,60 +88,39 @@ The Contact page is a form consisting of a name, email and message text input an
 
 ## Testing
 
-I used the W3C Markup Validator and W3C CSS Validator to validate my project making sure that there was no syntax errors.
+I used the W3C Markup Validator and W3C CSS Validator to validate my project making sure that there were no syntax errors.
+
 * [W3C Markup Validator](https://jigsaw.w3.org/css-validator/)
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 
-I used Google Chrome and Google Developer Tools for mobile devices to work through and test the page using real world events as the parameters, eg booking the band, contacting the band, checking gig dates, and trying to buy band merchandise.
+I used Google Chrome and Google Developer Tools for mobile devices to work through and test the page using real world events as the parameters, e.g. playing the game, completing and restarting.
 
-1. Header/Navigation; from the home page:
-    * Go to gigs page – go back to Home page
-    * Go to Merch page – go back to home page
-    * Go to Band page – go back to Home page
-    * Go to Contact page – go back to Home page
+1. Played the game, completed the game, restart from modal restart button:
+    * Click and matched all cards
+    * When the modal popped up
+    * Restarted the game from the restart button displayed on the modal
+    * Game area was reset, shuffled and hidden for new game
 
 * Also tested on mobile device
-* Also tested from each page to every other page
 
-2. Footer; Social Media links:
-    * Go to the Home page
-    * Click on Instagram link – Instagram opens
-    * Click on Twitter link – Twitter opens
-    * Click on Facebook link – Facebook opens
-    * Click on TikTok link – TikTok opens
-    * Click on Snapchat link – Snapchat opens
-    * Click on Youtube link – Youtube opens
+2. Played the game, completed the game, clicked outside of modal, restarted from header restart button:
+    * Click and matched all cards
+    * When the modal popped up
+    * clicked outside of modal which got rid of modal
+    * Restarted the game from the restart button displayed in header
+    * Game area was reset, shuffled and hidden for new game
 
-3.	Header/Navigation; from the home page:
-    * Go to gigs page – go back to Home page
-    * Go to Merch page – go back to home page
-    * Go to Band page – go back to Home page
-    * Go to Contact page – go back to Home page
+* Also tested on mobile device
 
-4.	Home Page; image/video link:
-    * On Home page click on Youtube video image
-    * Youtube video opens in new tab
+3. Played the game, after 4 matches, restarted from header restart button:
+    * Click and matched 4 cards
+    * Restarted the game from the restart button displayed in the header
+    * Game area was reset, shuffled and hidden for new game
 
-5.	Home Page; “Or Click Here” link:
-    * On Home page click on “Or Click Here” link
-    * contact.html opens
+* Also tested on mobile device
 
-6.	Gigs Link; gigs.html:
-    * Gigs page opens and looks as intended on desktop and mobile device
-
-7.	Merch page; links:
-    * Merch page opens and looks as intended on desktop and mobile device
-    * Records link – opens link in a new tab
-    * Clothes link – opens link in a new tab
-    * Memorabilia link – opens link in a new tab 
-
-8.	Band page:
-    * Band page opens and looks as intended on desktop and mobile device
-
-9.	Contact page:
-    * Contact page opens and looks as intended on desktop and mobile device
-    * Can input “details” and message
-    * When I click send it refreshes the page 
+4.	Contact link:
+    * Contact link in footer when clicked opens new tab with "mailto:doc.martin@gmail.com" in address bar
 
 
 ## Deployment
@@ -167,12 +128,19 @@ I used Google Chrome and Google Developer Tools for mobile devices to work throu
 This project was developed using GitPod, committed to git and pushed to GitHub using the built in function within GitPod.
 
 To deploy this page to GitHub Pages from its GitHub Repository, the following steps were taken:
+
 1.	Log into GitHub.
-2.	From the list of repositories on the screen, select docmartin87/Deuces-Wild
+
+2.	From the list of repositories on the screen, select docmartin87/Memory-Game
+
 3.	From the menu items near the top of the page, select Settings
+
 4.	Scroll down to the GitHub Pages section
+
 5.	Under Source, select Master Branch in the dropdown menu and hit Save
+
 6.	The page will refresh
+
 7.	Scroll back down the page to locate the now published site link
 
 Forking the GitHub Repository
@@ -180,26 +148,45 @@ Forking the GitHub Repository
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps;
 
 1. Log in to GitHub and locate the GitHub Repository
+
 2. At the top right of the page locate and click the "Fork" Button.
+
 3. You should now have a copy of the original repository in your GitHub account.
 
 
 ## Credits
 
-### Code
-* Bootstrap Library was used to make the site responsive using mainly it’s grid system.
-* Header Button Verticle Alignment [here](https://medium.com/wdstack/bootstrap-4-vertical-center-1211448a2eff#:~:text=One%20way%20to%20vertically%20center,col%2Dsm%2D12%20column.)
+I struggled a lot with this project, partly down to the workload outside of the course that I had to take on for personal reasons over the Christmas break which led me to needing an extension to complete the assignment, which added more pressure because I felt I was falling behind.
 
-### Content
-* The text for the Home page was taken from the [Deuces Wild](https://www.facebook.com/deuceswildlive/) Facebook page
-* The text for the Band page and the band members information was taken from the [Teenage Mutant Ninja Turtles](https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles) Wikipedia page
+If I've learned anything extra from this assignment it's that, having the general idea and then researching online and seeing how other people went about it is good, but too much research and looking at too many different videos and code can be overwhelming. This can be seen by the amount of times I started from scratch with this assignment.
+
+
+### Code
+
+* After overwhelming myself and restarting my assignment for the 4th time, I found that this video from freeCodeCamp.org I was able to follow and adapt to what I needed [Link](https://www.youtube.com/watch?v=ZniVgo8U7ek&ab_channel=freeCodeCamp.org)
+
+* [Modal](https://www.w3schools.com/howto/howto_css_modals.asp)
+
+* [My first template](https://github.com/docmartin87/memory-game-template-1) which I was attempting after researching from Code with Ania Kubów [Link](https://www.youtube.com/watch?v=tjyDOHzKN0w&ab_channel=CodewithAniaKub%C3%B3w)
+
+* [My second template](https://github.com/docmartin87/memory-game-template-2) which I was attempting after researching from a combination of Web Dev Junkie [Link](https://www.youtube.com/watch?v=bbb9dZotsOc&ab_channel=WebDevJunkie) and Ben's Memory Game [Link](https://www.youtube.com/watch?v=Nik1E9HdrsI&ab_channel=Premraj)
+
+* [My third template](https://github.com/docmartin87/memory-game-template-3) which I was attempting after researching from sandra srael/Memory-Game-fend [Link](https://github.com/sandraisrael/Memory-Game-fend)
+
 
 ### Media
-* The video and logo on the Home page was taken from the [Deuces Wild](https://www.facebook.com/deuceswildlive/) Facebook page
-* The pictures for the Band page for the band members was taken from the [Teenage Mutant Ninja Turtles](https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles) Wikipedia page
+
+* The card images [Link](http://acbl.mybigcommerce.com/52-playing-cards/)
+
 
 ### Acknowledgements
-* My mentor for continuous feedback on the project.
-* Tutor support from Code Institute.
-* I received inspiration for this project from the Code Institute Module - User Centric Frontend Development, Resume Project. Whiskey page and Love Running page from previous modules.
-* I received styling inspiration for this project from [The Killers](https://www.thekillersmusic.com/) website
+
+* Roman, my Tutor and Classroom coordinator
+
+* Tutor Support from Code Institute
+
+* Neil and the Student Care team 
+
+* I received inspiration for this project from the Code Institute Module - Interactive Frontend Development, and from previous modules.
+
+* I received styling inspiration for this project from most flip card turning memory games
